@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
 import 'Show_user.dart';
+import 'package:get/get.dart';
 class Accaunts extends StatefulWidget {
   const Accaunts({super.key});
   @override
   State<Accaunts> createState() => _AccauntsState();
 }
- List Accaunt = [];
 
-  TextEditingController name = TextEditingController();
-  TextEditingController mony = TextEditingController();
+List Accaunt = [];
+
+TextEditingController name = TextEditingController();
+TextEditingController mony = TextEditingController();
+
 class _AccauntsState extends State<Accaunts> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Jwali"), centerTitle: true),
-      
+
       body: Column(
         children: [
           Padding(

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:jawali/View/settings_page.dart';
 import 'Page.dart';
+import 'package:get/get.dart';
+
 class MYDROWER extends StatelessWidget {
   const MYDROWER({super.key});
 
@@ -39,120 +42,84 @@ class MYDROWER extends StatelessWidget {
                     title: Text("محفظة"),
                     leading: Icon(Icons.phone_android),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => MYPage()),
-                      );
+                     Get.to(MYPage());
                     },
                   ),
                   ListTile(
                     title: Text("طلب الدفع"),
                     leading: Icon(Icons.request_page),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => MYPage()),
-                      );
+                     Get.to(MYPage());
                     },
                   ),
                   ListTile(
                     title: Text("سداد فواتير/شحن رصيد"),
                     leading: Icon(Icons.receipt_long),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => MYPage()),
-                      );
+                     Get.to(MYPage());
                     },
                   ),
                   ListTile(
                     title: Text("اشتراك باقات"),
                     leading: Icon(Icons.sim_card),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => MYPage()),
-                      );
+                     Get.to(MYPage());
                     },
                   ),
                   ListTile(
                     title: Text("حوالات الشبكة"),
                     leading: Icon(Icons.sync_alt),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => MYPage()),
-                      );
+                     Get.to(MYPage());
                     },
                   ),
                   ListTile(
                     title: Text("الخدمات"),
                     leading: Icon(Icons.add_circle_outline_rounded),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => MYPage()),
-                      );
+                     Get.to(MYPage());
                     },
                   ),
                   ListTile(
                     title: Text("المفضلة"),
                     leading: Icon(Icons.star),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => MYPage()),
-                      );
+                     Get.to(MYPage());
                     },
                   ),
                   ListTile(
                     title: Text("كشف حساب"),
                     leading: Icon(Icons.bar_chart),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => MYPage()),
-                      );
+                     Get.to(MYPage());
                     },
                   ),
                   ListTile(
                     title: Text("المصارفة"),
                     leading: Icon(Icons.account_balance),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => MYPage()),
-                      );
+                     Get.to(MYPage());
                     },
                   ),
                   ListTile(
                     title: Text("المصارفة"),
                     leading: Icon(Icons.call),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => MYPage()),
-                      );
+                      Get.to(MYPage());
                     },
                   ),
                   ListTile(
-                    title: Text("المصارفة"),
+                    title: Text("الاعدادات"),
                     leading: Icon(Icons.settings),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => MYPage()),
-                      );
+                      Get.to(SettingsPage());
                     },
                   ),
                   ListTile(
-                    title: Text("المصارفة"),
+                    title: Text("خروج"),
                     leading: Icon(Icons.logout),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => MYPage()),
-                      );
+                      Get.to(MYPage());
                     },
                   ),
                 ],

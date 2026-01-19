@@ -1,16 +1,51 @@
-# jawali
+# 💰 Jwali App
 
-A new Flutter project.
+تطبيق Flutter بسيط لإدارة الحسابات (Accounts) باستخدام  
+**GetX** و **MVC Architecture**.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📌 فكرة التطبيق
+- إضافة مستخدم (اسم + مبلغ)
+- عرض المستخدمين في ListView
+- حذف المستخدم
+- تعديل بيانات المستخدم
+- عرض جميع المستخدمين في صفحة ثانية
+- مشاركة البيانات بين الصفحات بدون تمرير Parameters
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🛠️ التقنيات المستخدمة
+- Flutter
+- Dart
+- GetX (State Management + Navigation)
+- MVC Architecture
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🧠 Architecture (MVC)
+
+### ✅ Model
+تم استخدام `String` لتمثيل البيانات (Name + Money)  
+(يمكن تطويره لاحقًا إلى Model كامل).
+
+### ✅ Controller
+- مسؤول عن:
+  - إضافة المستخدم
+  - حذف المستخدم
+  - تعديل المستخدم
+- يحتوي على List Reactive باستخدام `.obs`
+
+### ✅ View
+- لا تحتوي على منطق
+- تعتمد على `Obx` لتحديث الواجهة تلقائيًا
+- لا تستخدم `setState`
+
+---
+
+## 🚀 تشغيل المشروع
+
+1. تأكد من تثبيت Flutter
+2. ثبّت الحزم:
+```bash
+flutter pub get

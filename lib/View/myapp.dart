@@ -3,7 +3,9 @@ import 'mydrower.dart';
 import 'accaunts.dart';
 import 'image.dart';
 import 'slide.dart';
-import 'package:jawali/Page.dart';
+import 'Page.dart';
+import 'package:get/get.dart';
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
@@ -32,7 +34,7 @@ class _HomePageState extends State<HomePage> {
 
       body: Column(
         children: [
-          SizedBox(height: 20,),
+          SizedBox(height: 20),
           Container(
             decoration: BoxDecoration(
               color: Colors.black45,
@@ -60,8 +62,15 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(50),
                           ),
-                          child: IconButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => Accaunts(),));},
-                              icon: Icon(Icons.supervisor_account_rounded,color: Colors.black,)),
+                          child: IconButton(
+                            onPressed: () {
+                              Get.to(Accaunts());
+                            },
+                            icon: Icon(
+                              Icons.supervisor_account_rounded,
+                              color: Colors.black,
+                            ),
+                          ),
                         ),
                         Text("\n الحسابات"),
                       ],
@@ -76,8 +85,12 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(50),
                           ),
-                          child: IconButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => ImagePickerPage(),));},
-                              icon: Icon(Icons.image,color: Colors.black,)),
+                          child: IconButton(
+                            onPressed: () {
+                              Get.to(ImagePickerPage());
+                            },
+                            icon: Icon(Icons.image, color: Colors.black),
+                          ),
                         ),
                         Text("\nاضافة صورة"),
                       ],
@@ -92,8 +105,12 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(50),
                           ),
-                          child: IconButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => CarouselPage(),));},
-                              icon: Icon(Icons.slideshow,color: Colors.black,)),
+                          child: IconButton(
+                            onPressed: () {
+                              Get.to(CarouselPage());
+                            },
+                            icon: Icon(Icons.slideshow, color: Colors.black),
+                          ),
                         ),
                         Text("\nالعروض"),
                       ],
@@ -114,8 +131,15 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(50),
                           ),
-                          child: IconButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => MYPage(),));},
-                              icon: Icon(Icons.shopping_cart_outlined,color: Colors.black,)),
+                          child: IconButton(
+                            onPressed: () {
+                              Get.to(MYPage());
+                            },
+                            icon: Icon(
+                              Icons.shopping_cart_outlined,
+                              color: Colors.black,
+                            ),
+                          ),
                         ),
                         Text("\nمشتريات"),
                       ],
@@ -130,8 +154,12 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(50),
                           ),
-                          child: IconButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => MYPage(),));},
-                              icon: Icon(Icons.atm,color: Colors.black,)),
+                          child: IconButton(
+                            onPressed: () {
+                              Get.to(MYPage());
+                            },
+                            icon: Icon(Icons.atm, color: Colors.black),
+                          ),
                         ),
                         Text("\n سحب من صراف الي"),
                       ],
@@ -146,8 +174,12 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(50),
                           ),
-                          child: IconButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => MYPage(),));},
-                              icon: Icon(Icons.receipt_long,color: Colors.black,)),
+                          child: IconButton(
+                            onPressed: () {
+                              Get.to(MYPage());
+                            },
+                            icon: Icon(Icons.receipt_long, color: Colors.black),
+                          ),
                         ),
                         Text("\nسداد فواتير"),
                       ],
@@ -168,8 +200,12 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(50),
                           ),
-                          child: IconButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => MYPage(),));},
-                              icon: Icon(Icons.sim_card,color: Colors.black,)),
+                          child: IconButton(
+                            onPressed: () {
+                              Get.to(MYPage());
+                            },
+                            icon: Icon(Icons.sim_card, color: Colors.black),
+                          ),
                         ),
                         Text("\nاشتراك باقات"),
                       ],
@@ -184,8 +220,15 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(50),
                           ),
-                          child: IconButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => MYPage(),));},
-                              icon: Icon(Icons.send_and_archive,color: Colors.black,)),
+                          child: IconButton(
+                            onPressed: () {
+                              Get.to(MYPage());
+                            },
+                            icon: Icon(
+                              Icons.send_and_archive,
+                              color: Colors.black,
+                            ),
+                          ),
                         ),
                         Text("\nتحويل الى محفظة"),
                       ],
@@ -200,8 +243,15 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(50),
                           ),
-                          child: IconButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => MYPage(),));},
-                              icon: Icon(Icons.add_circle_outline_rounded,color: Colors.black,)),
+                          child: IconButton(
+                            onPressed: () {
+                              Get.to(MYPage());
+                            },
+                            icon: Icon(
+                              Icons.add_circle_outline_rounded,
+                              color: Colors.black,
+                            ),
+                          ),
                         ),
                         Text("\nاضافة خدمة"),
                       ],
@@ -234,12 +284,17 @@ class _HomePageState extends State<HomePage> {
             width: 500,
             height: 329,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.only( 
+              borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(75),
-                topRight: Radius.circular(75),),
-              color: Colors.black38
+                topRight: Radius.circular(75),
+              ),
+              color: Colors.black38,
             ),
-            child: Text("\n\n\n\n   العمليات المسجلة",textAlign: TextAlign.center,style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+            child: Text(
+              "\n\n\n\n   العمليات المسجلة",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
           ),
         ],
       ),
